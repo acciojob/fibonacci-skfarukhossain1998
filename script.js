@@ -17,7 +17,7 @@ function fibonacci(num) {
     return curr;
   }
 }
-/* var num = 6;
+var num = 6;
 var result = fibonacci(num);
-console.log(result);  */
+console.log(result); 
 module.exports = fibonacci;

@@ -1,7 +1,7 @@
 function fibonacci(num) {
-  if (num === 0) {
+  if (num === 0 || num === 1) {
     return 0;
-  } else if (num === 1 || num === 2) {
+  } else if (num === 2) {
     return 1;
   } else if (num < 0 || num > 50) {
     return "Invalid input";
@@ -17,7 +17,9 @@ function fibonacci(num) {
     return curr;
   }
 }
-var num = 6;
+/* var num = 3;
 var result = fibonacci(num);
 console.log(result); 
+ */
+
 module.exports = fibonacci;

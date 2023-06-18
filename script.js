@@ -1,25 +1,26 @@
 function fibonacci(num) {
-  if (num === 0 || num === 1) {
+  if (num === 0) {
     return 0;
-  } else if (num === 2) {
-    return 1;
-  } else if (num < 0 || num > 50) {
-    return "Invalid input";
-  } else {
-    let prev1 = 1;
-    let prev2 = 1;
-    let curr = 0;
-    for (let i = 3; i <= num; i++) {
-      curr = prev1 + prev2;
-      prev2 = prev1;
-      prev1 = curr;
-    }
-    return curr;
   }
+   if (num === 1 || num === 2 ) {
+    return 1;
+  }
+
+  var prev = 0;
+  var current = 1;
+
+  for (var i = 3; i <= num; i++) {
+    var next = prev + current;
+    prev = current;
+    current = next;
+  }
+
+  return current;
 }
-/* var num = 3;
+/* var num = 5;
 var result = fibonacci(num);
-console.log(result); 
- */
+console.log(result);  */
+
+
 
 module.exports = fibonacci;
